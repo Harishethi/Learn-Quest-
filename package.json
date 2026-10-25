@@ -1,0 +1,9 @@
+{
+  "name": "questlearn-lms",
+  "version": "1.0.0",
+  "description": "QuestLearn - a gamified Learning Management System (HTML/CSS/JS)",
+  "scripts": {
+    "start": "npx --yes serve ."
+  },
+  "license": "MIT"
+}

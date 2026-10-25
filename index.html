@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuestLearn — Gamified Learning Platform</title>
+  <meta name="description" content="QuestLearn: a gamified learning management system with XP, levels, streaks, badges, quests and leaderboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>" />
+</head>
+<body data-theme="neon">
+  <!-- Animated background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="grid-overlay"></div>
+
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a class="logo" data-go="#/dashboard">
+        <span class="logo-mark">⚔️</span>
+        <span>Quest<span class="grad-text">Learn</span></span>
+      </a>
+      <nav id="nav"></nav>
+      <div class="side-tip">
+        <span>💡</span>
+        <p>Answer fast & build combos to multiply your XP!</p>
+      </div>
+      <div class="side-profile" data-go="#/profile">
+        <div class="avatar sm" id="side-avatar">🦊</div>
+        <div class="sp-text">
+          <b id="side-name">Learner</b>
+          <small id="side-title">Novice</small>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu">☰</button>
+        <h2 id="page-title">Dashboard</h2>
+        <div class="top-stats">
+          <div class="chip streak" id="chip-streak" title="Day streak">🔥 <b>0</b></div>
+          <div class="chip coins" id="chip-coins" title="Coins">🪙 <b>0</b></div>
+          <div class="chip level" id="chip-level" title="Level progress">
+            <span class="lv">Lv <b>1</b></span>
+            <div class="mini-bar"><i></i></div>
+          </div>
+          <button class="icon-btn" id="sound-btn" title="Toggle sound">🔊</button>
+        </div>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+  </div>
+
+  <canvas id="fx-canvas"></canvas>
+  <div id="toasts"></div>
+  <div id="modal-root"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
